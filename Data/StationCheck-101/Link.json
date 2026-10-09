@@ -1,0 +1,8 @@
+{
+  "aciklama": "StationCheck uzak ayar paketi",
+  "surum": 1,
+  "guncelleme_adresleri": [
+    "https://raw.githubusercontent.com/fezaks/stationcheck-updates/main/Data/StationCheck-101/surum.json"
+  ],
+  "rapor_host_url": ""
+}
