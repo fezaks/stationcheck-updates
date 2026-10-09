@@ -1,7 +1,9 @@
 {
   "uygulama_id": "101",
   "versiyon": "101.26.0",
-  "zip_adres": "",
-  "sha256": "",
-  "zorunlu": false
+  "zorunlu": false,
+  "paketler": {
+    "win-x64": { "zip_adres": "", "sha256": "" },
+    "linux-arm": { "zip_adres": "", "sha256": "" }
+  }
 }
