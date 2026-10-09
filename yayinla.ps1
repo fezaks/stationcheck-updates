@@ -30,6 +30,8 @@ function Dur([string]$neden) {
     Write-Host "surum.json'a dokunulmadı." -ForegroundColor Red
     exit 1
 }
+# Beklenmeyen her hata (cmdlet / .NET): yarım yayın olmasın, surum.json'a dokunmadan çıkış kodu 1 ile dur
+trap { Dur ("Beklenmeyen hata: " + $_.Exception.Message) }
 
 # gh: PATH'te yoksa standart kurulum yeri
 $gh = (Get-Command gh -ErrorAction SilentlyContinue).Source
@@ -43,7 +45,8 @@ $surumYolu = Join-Path $Kok "$UygulamaID\surum.json"
 if (-not $Deneme -and -not (Test-Path -LiteralPath $surumYolu)) { Dur "surum.json yok: $surumYolu" }
 & $gh auth status *> $null
 if ($LASTEXITCODE -ne 0) { Dur "GitHub girişi yok (gh auth login)." }
-$repo = (& $gh repo view --json nameWithOwner -q .nameWithOwner 2>$null)
+Push-Location $Kok   # depo betiğin kendi klasöründen okunur (çağrıldığı klasörden değil)
+try { $repo = (& $gh repo view --json nameWithOwner -q .nameWithOwner 2>$null) } finally { Pop-Location }
 if ($LASTEXITCODE -ne 0 -or -not $repo) { Dur "GitHub deposu okunamadı (klasör: $Kok)." }
 Push-Location $Kok
 try {
@@ -63,7 +66,7 @@ try {
     $kaynak = (Resolve-Path -LiteralPath $Klasor -ErrorAction Stop).Path.TrimEnd('\', '/')
     $dosyalar = Get-ChildItem -LiteralPath $kaynak -Recurse -File -Force | Where-Object {
         $goreli = $_.FullName.Substring($kaynak.Length + 1)
-        $ilk = $goreli.Split('\', '/')[0]
+        $ilk = $goreli.Split([char[]]@('\', '/'))[0]
         -not ($KorunanKlasorler -contains $ilk -and $goreli.Length -gt $ilk.Length)
     }
     if (-not $dosyalar) { Dur "Klasörde pakete girecek dosya yok: $Klasor" }
