@@ -1,9 +1,9 @@
 {
   "uygulama_id": "101",
-  "versiyon": "101.26.0",
+  "versiyon": "101.26.41",
   "zorunlu": false,
   "paketler": {
-    "win-x64": { "zip_adres": "", "sha256": "" },
+    "win-x64": { "zip_adres": "https://github.com/fezaks/stationcheck-updates/releases/download/v101.26.41/101_101.26.41_win_20261010-020521.zip", "sha256": "e916e1d48475ac632f9536da676a9eae7f92a0df05cb387f367fa6e4e6fdf82f" },
     "linux-arm": { "zip_adres": "", "sha256": "" }
   }
 }

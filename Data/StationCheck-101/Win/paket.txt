@@ -1,1 +1,6 @@
-Henüz yayın yok.
+Sürüm       : 101.26.41
+Paket adı   : 101_101.26.41_win_20261010-020521.zip
+Boyut       : 204,2 MB (214124110 bayt)
+SHA-256     : e916e1d48475ac632f9536da676a9eae7f92a0df05cb387f367fa6e4e6fdf82f
+Release     : https://github.com/fezaks/stationcheck-updates/releases/download/v101.26.41/101_101.26.41_win_20261010-020521.zip
+Yayın tarihi: 2026-10-10 02:05:21
