@@ -1,7 +1,8 @@
-Sürüm       : 101.26.52
-Paket adı   : 101_101.26.52_win_20261010-063952.zip
-Boyut       : 294,7 KB (301745 bayt)
-SHA-256     : 34952c307ef0147322e636360fe91277a574bdb030b6ee92753378bffa2a49b5
-Release     : https://github.com/fezaks/stationcheck-updates/releases/download/v101.26.52/101_101.26.52_win_20261010-063952.zip
-Yayın tarihi: 2026-10-10 06:39:52
+Sürüm       : 101.26.54
+Paket adı   : 101_101.26.54_win_20261010-065437.zip
+Boyut       : 292,1 KB (299076 bayt)
+SHA-256     : 3c388c28060fc1f7ad2c0940741cb98c58459772215495ca2260b290d9fed7e2
+Release     : https://github.com/fezaks/stationcheck-updates/releases/download/v101.26.54/101_101.26.54_win_20261010-065437.zip
+Yayın tarihi: 2026-10-10 06:54:37
 Tam kurulum : evet
+Yayın kimliği: 20261010065437
